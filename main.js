@@ -1,26 +1,25 @@
 // masalalar 1-10
 function task1(num) {
     if (num > 0) {
-        num += 1;
+        num = num + 1;
     }
     console.log("Task 1 result:", num);
 }
 
-
 function task2(num) {
     if (num > 0) {
-        num += 1;
+        num = num + 1;
     } else {
-        num -= 2;
+        num = num - 2;
     }
     console.log("Task 2 result:", num);
 }
 
 function task3(num) {
     if (num > 0) {
-        num += 1;
+        num = num + 1;
     } else if (num < 0) {
-        num -= 2;
+        num = num - 2;
     } else {
         num = 10;
     }
@@ -29,37 +28,61 @@ function task3(num) {
 
 function task4(num1, num2, num3) {
     let count = 0;
-    if (num1 > 0) count++;
-    if (num2 > 0) count++;
-    if (num3 > 0) count++;
+    if (num1 > 0) {
+        count = count + 1;
+    }
+    if (num2 > 0) {
+        count = count + 1;
+    }
+    if (num3 > 0) {
+        count = count + 1;
+    }
     console.log("Task 4 result:", count);
 }
-
 
 function task5(num1, num2, num3) {
     let positiveCount = 0;
     let negativeCount = 0;
-    if (num1 > 0) positiveCount++;
-    if (num2 > 0) positiveCount++;
-    if (num3 > 0) positiveCount++;
-    if (num1 < 0) negativeCount++;
-    if (num2 < 0) negativeCount++;
-    if (num3 < 0) negativeCount++;
+    if (num1 > 0) {
+        positiveCount = positiveCount + 1;
+    }
+    if (num2 > 0) {
+        positiveCount = positiveCount + 1;
+    }
+    if (num3 > 0) {
+        positiveCount = positiveCount + 1;
+    }
+    if (num1 < 0) {
+        negativeCount = negativeCount + 1;
+    }
+    if (num2 < 0) {
+        negativeCount = negativeCount + 1;
+    }
+    if (num3 < 0) {
+        negativeCount = negativeCount + 1;
+    }
     console.log("Task 5 result: Positive =", positiveCount, "Negative =", negativeCount);
 }
 
-
 function task6(num1, num2) {
-    let max = (num1 > num2) ? num1 : num2;
+    let max;
+    if (num1 > num2) {
+        max = num1;
+    } else {
+        max = num2;
+    }
     console.log("Task 6 result:", max);
 }
 
-
 function task7(num1, num2) {
-    let min = (num1 < num2) ? num1 : num2;
+    let min;
+    if (num1 < num2) {
+        min = num1;
+    } else {
+        min = num2;
+    }
     console.log("Task 7 result:", min);
 }
-
 
 function task8(num1, num2) {
     if (num1 > num2) {
@@ -68,7 +91,6 @@ function task8(num1, num2) {
         console.log("Task 8 result: First =", num2, "Second =", num1);
     }
 }
-
 
 function task9(a, b) {
     if (a > b) {
@@ -79,10 +101,9 @@ function task9(a, b) {
     console.log("Task 9 result: A =", a, "B =", b);
 }
 
-
 function task10(a, b) {
-    if (a !== b) {
-        a += b;
+    if (a != b) {
+        a = a + b;
     } else {
         a = 0;
     }
@@ -100,6 +121,7 @@ task7(10, 20);
 task8(10, 20);
 task9(10, 5);
 task10(10, 10);
+
 
 // switch 
 function getDayName(dayNumber) {
